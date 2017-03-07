@@ -1,37 +1,13 @@
-## Welcome to GitHub Pages
+## Welcome to XPath Next
 
-You can use the [editor on GitHub](https://github.com/XPath-Next/XPath-Next/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/XPath-Next/XPath-Next/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+XPath Next is a place to gather requirement for evolution of XPath standards coming from:
+ * Existing language host 
+    * XSLT: [XSLT 1.0](https://www.w3.org/TR/xslt), [XSLT 2.0](https://www.w3.org/TR/xslt20/), [XSLT 3.0](https://www.w3.org/TR/xslt-30/)
+    * XPointer: [XPointer](https://www.w3.org/TR/xptr/)
+    * XQuery: [XQuery 1.0](https://www.w3.org/TR/xquery/), [XQuery 1.1](https://www.w3.org/TR/xquery-11/), [XQuery 3.0](https://www.w3.org/TR/xquery-30/)
+    * XForms
+    * XProc
+    * Schematron
+    * EXPath
+    ...
+ * Potential language host
