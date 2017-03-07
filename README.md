@@ -9,6 +9,6 @@ XPath Next is a place to gather requirement for evolution of XPath standards com
     * XProc: [XProc 1.0](https://www.w3.org/TR/xproc/), [XProc 1.1](http://spec.xproc.org/master/head/xproc11/), [XProc 2.0](https://www.w3.org/TR/xproc20/)
     * Schematron: [ISO Schematron 2006](http://schematron.com), [ISO Schematron 2016](http://schematron.com)
     * EXPath: [EXPath](https://www.w3.org/community/expath/)
-    * [Please help providing missing XPath hosts]
+    * *Please help providing missing XPath hosts*
     ...
  * Potential language host
