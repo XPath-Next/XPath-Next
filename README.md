@@ -3,9 +3,9 @@
 XPath Next is a place to gather requirement for evolution of XPath standards coming from:
  * XPath specifications
     * [XPath 1.0](https://www.w3.org/TR/xpath/)
-    * [XPath 2.0](https://www.w3.org/TR/xpath20/), [XPath 2.0 Functions and Operators](https://www.w3.org/TR/xpath-functions/) and [XPath 2.0 Formal Semantics](https://www.w3.org/TR/xquery-semantics/)
-    * [XPath 3.0](https://www.w3.org/TR/xpath-30/) and [XPath 3.0 Functions and Operators](https://www.w3.org/TR/xpath-functions-30/)
-    * [XPath 3.1](https://www.w3.org/TR/xpath-31/) and [XPath 3.1 Functions and Operators](https://www.w3.org/TR/xpath-functions-31/)
+    * [XPath 2.0 Data Model (XDM)](https://www.w3.org/TR/xpath-datamodel/), [XPath 2.0](https://www.w3.org/TR/xpath20/), [XPath 2.0 Functions and Operators](https://www.w3.org/TR/xpath-functions/) and [XPath 2.0 Formal Semantics](https://www.w3.org/TR/xquery-semantics/)
+    * [XPath 3.0 Data Model (XDM)](https://www.w3.org/TR/xpath-datamodel-30/), [XPath 3.0](https://www.w3.org/TR/xpath-30/) and [XPath 3.0 Functions and Operators](https://www.w3.org/TR/xpath-functions-30/)
+    * [XPath 3.1 Data Model (XDM)](https://www.w3.org/TR/xpath-datamodel-31/), [XPath 3.1](https://www.w3.org/TR/xpath-31/) and [XPath 3.1 Functions and Operators](https://www.w3.org/TR/xpath-functions-31/)
  * Existing language host 
     * XSLT: [XSLT 1.0](https://www.w3.org/TR/xslt), [XSLT 2.0](https://www.w3.org/TR/xslt20/), [XSLT 3.0](https://www.w3.org/TR/xslt-30/)
     * XPointer: [XPointer](https://www.w3.org/TR/xptr/)
