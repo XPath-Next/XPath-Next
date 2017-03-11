@@ -1,6 +1,6 @@
 ## Welcome to XPath Next
 
-This is the github project of the W3C XPath Next Community Group : https://www.w3.org/community/xpath-next/
+This is the github project of the W3C XPath Next Community Group: [https://www.w3.org/community/xpath-next/](https://www.w3.org/community/xpath-next/)
 
 XPath Next is a place to gather requirement for evolution of XPath standards coming from:
  * XPath specifications
