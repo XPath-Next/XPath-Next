@@ -27,8 +27,8 @@ XPath Next is a place to gather requirement for evolution of XPath standards com
       * [XML Schema 1.0 subsets](https://www.w3.org/TR/2004/PER-xmlschema-1-20040318/#coss-identity-constraint)
       * [XML Signature Streaming Profile of XPath 1.0](https://www.w3.org/TR/xmldsig-xpath/)
       * [Core XPath](https://infoscience.epfl.ch/record/166890/files/65-pods2003.pdf)
-   * related (not striclty a superset nor stricly a subset)
-      * (Regular XPath](https://www.cs.rice.edu/~vardi/papers/dbpl09.pdf)
+   * Related (not striclty a superset nor stricly a subset)
+      * [Regular XPath](https://www.cs.rice.edu/~vardi/papers/dbpl09.pdf)
    * Superset
       * [XQuery and XPath 2.0 Full Text](https://www.w3.org/TR/2011/REC-xpath-full-text-10-20110317/)
  
