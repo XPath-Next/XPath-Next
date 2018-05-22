@@ -17,7 +17,7 @@ XPath Next is a place to gather requirement for evolution of XPath standards com
       * 3.0: [XQuery 3.0](https://www.w3.org/TR/xquery-30/), [XQuery Update Facility 3.0](https://www.w3.org/TR/xquery-update-30/)
       * 3.1: [XQuery 3.1](https://www.w3.org/TR/xquery-31/)
     * XForms: [XForms 1.0](https://www.w3.org/TR/2003/REC-xforms-20031014/), [XForms 1.1](https://www.w3.org/TR/xforms/), [XForms 2.0](https://www.w3.org/TR/xforms20/)
-    * XProc: [XProc 1.0](https://www.w3.org/TR/xproc/), [XProc 1.1](http://spec.xproc.org/master/head/xproc11/), [XProc 2.0](https://www.w3.org/TR/xproc20/)
+    * XProc: [XProc 1.0](https://www.w3.org/TR/xproc/), [XProc 1.1](http://spec.xproc.org/master/head/xproc11/), [XProc 2.0](https://www.w3.org/TR/xproc20/), [XProc 3.0](http://spec.xproc.org/master/head/)
     * Schematron: [ISO Schematron 2006](http://schematron.com), [ISO Schematron 2016](http://schematron.com)
     * EXPath: [EXPath](https://www.w3.org/community/expath/)
     * *Please help providing missing XPath hosts*
