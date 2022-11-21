@@ -63,7 +63,7 @@ Let's define a function that give **true** is a value evaluated as a number is o
 ```xml
 <define name="fnext:is-odd" depends="xpath1" xmlns:fnext="https://xmlprague.cz/ns/fnext">
   <param name="n"/>
-  $n%2=1
+  $n mod 2=1
 </define>
 ```
 ### Examples of Level 1
