@@ -83,6 +83,9 @@ Let's define a function that give **true** if a file is of size odd.
   fnext:is-odd(file:size($file))
 </define>
 ```
+## Tools
+We may need to have some tools to convert the define files into XSLT Function, XQuery functions or XProc functions
 
+## Notes
 It follows up from a discussion on slack of xml.com https://xmlcom.slack.com/archives/C01GVC3JLHE/p1669017333666309?thread_ts=1668720735.717849&cid=C01GVC3JLHE
 
