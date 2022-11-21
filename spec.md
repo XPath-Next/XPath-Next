@@ -14,7 +14,18 @@ We can create any function we like as soon we can implement it with
 * level 2 : everything in level 1 and a set of EXPath extensions : for example something working with EXPath File
 * level 3 : everything in level 2 and some extra code dependant on the host language (XSLT, XQuery, XProc, etc.)
 * level 4 : everything in level 3 and some extra code dependant on a generic agreed language (Javascript ?)
-* level 5 : everything in level 4 and some extra code dependant on the language implementation of the product (JDK, DotNet, ERlang, etc.)  
+* level 5 : everything in level 4 and some extra code dependant on the language implementation of the product (JDK, DotNet, ERlang, etc.) 
+
+## Goals and non goals
+To provide a way to allow people to add some extension **without** having to pay the cost of writing a spec
+Of course the spec of the building blocks are around, but that's not mandatory to make every snippet of code dependant on the existence of a SPEC
+
+Allow to extends XPath based languages with some cross knowledge from one language to the other
+
+It should not replace EXPath or any other attemps to standardise way more complex extensions to XPath (things that can't be done from within XPath)
+But it should minimize the number of functions needed
+It can be seen as crowd sourced version of FunctX (add links)
+
 ## Namespaces
 The module defined by this document defines functions and errors in the namespace [http://expath.org/ns/file](https://xmlprague.cz/ns/next). In this document, the **next** prefix is bound to this namespace URI.
 We will also use the following prefixes
