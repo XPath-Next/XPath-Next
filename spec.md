@@ -12,7 +12,7 @@ It can be loaded dynamically from some trusted source by the system
 We can create any function we like as soon we can implement it with 
 * level 0 : full XPath (depends on the XPath version then) : for example, fnext:is-odd(n) defined as n%2=1
 * level 1 : everything in level 0 and other fnext definitions : for example, fnext:is-even(n) defined as not(fnext:is-odd)
-* level 2 : everything in level 1 and a set of EXPath extensions : for example something working with EXPath File
+* level 2 : everything in level 1 and a set of EXPath extensions : for example is the size of file an odd number of bytes, using EXPath File
 * level 3 : everything in level 2 and some extra code dependant on the host language (XSLT, XQuery, XProc, etc.)
 * level 4 : everything in level 3 and some extra code dependant on a generic agreed language (Javascript ?)
 * level 5 : everything in level 4 and some extra code dependant on the language implementation of the product (JDK, DotNet, ERlang, etc.) 
