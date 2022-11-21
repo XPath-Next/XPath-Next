@@ -30,9 +30,9 @@ It can be seen as crowd sourced version of FunctX (add links)
 ## Namespaces
 The module defined by this document defines functions and errors in the namespace [https://xmlprague.cz/ns/fnext](https://xmlprague.cz/ns/fnext). In this document, the **fnext** prefix is bound to this namespace URI.
 We will also use the following prefixes
-* *xpath1* to reference  last XPath 1.x Specification (TODO link)
-* *xpath2* to reference  last XPath 2.x Specification (TODO link)
-* *xpath3* to reference last XPath 3.x specification (TODO link)
+* *xpath1* to reference  last XPath 1.x Specification (https://www.w3.org/TR/xpath-10/)
+* *xpath2* to reference  last XPath 2.x Specification (https://www.w3.org/TR/xpath-20/)
+* *xpath3* to reference last XPath 3.x specification (https://www.w3.org/TR/xpath-3/)
 * *xpath4* to reference last XPath 4.x specification (TODO link)
 
 ## Function definition
