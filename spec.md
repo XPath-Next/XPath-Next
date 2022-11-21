@@ -39,14 +39,17 @@ We will also use the following prefixes
 ```xml
 <define 
    name = NCName
-   depends = NCName+>
+   depends = NCName+
+   as?= QName>
   (param*)
   content
 </define>
 ```
 
 ```xml
-<param name = NCName />
+<param 
+    name = NCName 
+    as?= QName />
 ```
 
 
