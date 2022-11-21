@@ -10,7 +10,8 @@ It can be loaded dynamically from some trusted source by the system
 
 
 We can create any function we like as soon we can implement it with 
-* level 1 : full XPath (depends on the XPath version then) and other fnext definitions : for example, fnext:is-odd(n) defined as n%2=1
+* level 0 : full XPath (depends on the XPath version then) : for example, fnext:is-odd(n) defined as n%2=1
+* level 1 : everything in level 0 and other fnext definitions : for example, fnext:is-even(n) defined as not(fnext:is-odd)
 * level 2 : everything in level 1 and a set of EXPath extensions : for example something working with EXPath File
 * level 3 : everything in level 2 and some extra code dependant on the host language (XSLT, XQuery, XProc, etc.)
 * level 4 : everything in level 3 and some extra code dependant on a generic agreed language (Javascript ?)
@@ -27,7 +28,7 @@ But it should minimize the number of functions needed
 It can be seen as crowd sourced version of FunctX (add links)
 
 ## Namespaces
-The module defined by this document defines functions and errors in the namespace [http://expath.org/ns/file](https://xmlprague.cz/ns/next). In this document, the **next** prefix is bound to this namespace URI.
+The module defined by this document defines functions and errors in the namespace [https://xmlprague.cz/ns/fnext](https://xmlprague.cz/ns/fnext). In this document, the **fnext** prefix is bound to this namespace URI.
 We will also use the following prefixes
 * *xpath1* to reference  last XPath 1.x Specification (TODO link)
 * *xpath2* to reference  last XPath 2.x Specification (TODO link)
@@ -57,21 +58,29 @@ We will also use the following prefixes
 In order for this to work in all XPath bounded language, we propose an extension attribute call **@extends-fn-with** with declare the namespace we want to extends 
 This mecanism is not needed to use those extension, because people could just continue to use the direct naming extension mecanism 
 ## Examples 
-### Examples of Level 1
-Let's define a function that give **true** is a value evaluated as a number if
+### Examples of Level 0
+Let's define a function that give **true** is a value evaluated as a number is odd
 ```xml
-<define name="is-odd" depends="xpath1" xmlns:next="https://xmlprague.cz/ns/next">
+<define name="fnext:is-odd" depends="xpath1" xmlns:fnext="https://xmlprague.cz/ns/fnext">
   <param name="n"/>
   $n%2=1
+</define>
+```
+### Examples of Level 1
+Let's define a function that give **true** is a value evaluated as a number is even
+```xml
+<define name="fnext:is-even" depends="xpath1 fnext" xmlns:fnext="https://xmlprague.cz/ns/fnext">
+  <param name="n"/>
+  not(fnext:is-odd($n))
 </define>
 ```
 
 ### Examples of Level 2
 Let's define a function that give **true** if a file is of size odd.
 ```xml
-<define name="is-file" depends="xpath1 file" xmlns:next="https://xmlprague.cz/ns/next" xmlns:file="http://expath.org/ns/file">
+<define name="fnext:is-file" depends="xpath1 fnext file" xmlns:fnext="https://xmlprague.cz/ns/fnext" xmlns:file="http://expath.org/ns/file">
   <param name="file"/>
-  file:size($file)%2=1
+  fnext:is-odd(file:size($file))
 </define>
 ```
 
