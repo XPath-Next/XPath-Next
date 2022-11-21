@@ -16,6 +16,27 @@ We can create any function we like as soon we can implement it with
 * level 4 : everything in level 3 and some extra code dependant on a generic agreed language (Javascript ?)
 * level 5 : everything in level 4 and some extra code dependant on the language implementation of the product (JDK, DotNet, ERlang, etc.)  
 
+## Extension mechanism
+In order for this to work in all XPath bounded language, we propose an extension attribute call **@extends-fn-with** with declare the namespace we want to extends 
+This mecanism is not needed to use those extension, because people could just continue to use the direct naming extension mecanism 
+## Examples 
+### Examples of Level 1
+Let's define a function that give **true** is a value evaluated as a number if
+```xml
+<define name="is-odd" depends="xpath10" xmlns:next="https://xmlprague.cz/ns/next">
+  <param name="n"/>
+  $n%2=1
+</define>
+```
+
+### Examples of Level 2
+Let's define a function that give **true** if a file is of size odd.
+```xml
+<define name="is-file" depends="xpath10 file" xmlns:next="https://xmlprague.cz/ns/next" xmlns:file="http://expath.org/ns/file">
+  <param name="file"/>
+  file:size($file)%2=1
+</define>
+```
 
 It follows up from a discussion on slack of xml.com https://xmlcom.slack.com/archives/C01GVC3JLHE/p1669017333666309?thread_ts=1668720735.717849&cid=C01GVC3JLHE
 
