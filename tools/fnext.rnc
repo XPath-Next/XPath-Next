@@ -1,0 +1,10 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = fnext
+fnext = element fnext { define+ }
+define = element define { attribute name { xsd:QName }, 
+           attribute depends { xsd:NMTOKENS }, attribute as { xsd:QName }?, define-content }
+define-content = param*, result
+param = element param { attribute name { xsd:NCName}, attribute as { xsd:QName }?, empty}
+result = element result { attribute select { text } | any }
+any = element * { (attribute * { text } | text | any)* }
