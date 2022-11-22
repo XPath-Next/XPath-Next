@@ -1,2 +1,14 @@
 <fnext>
+    <define name="fnext:is-odd" depends="xpath1" xmlns:fnext="https://xmlprague.cz/ns/fnext">
+        <param name="n"/>
+        <result select="$n mod 2=1"/>
+    </define>
+    <define name="fnext:is-even" depends="xpath1 fnext" xmlns:fnext="https://xmlprague.cz/ns/fnext">
+        <param name="n"/>
+        <result select="not(fnext:is-odd($n))"/>
+    </define>
+    <define name="fnext:is-file" depends="xpath1 fnext file" xmlns:fnext="https://xmlprague.cz/ns/fnext" xmlns:file="http://expath.org/ns/file">
+        <param name="file"/>
+        <result select="fnext:is-odd(file:size($file))"/>
+    </define>
 </fnext>
