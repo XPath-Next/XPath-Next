@@ -1,31 +1,33 @@
-# XPath Next (draft)
+# XPath Next (draft) : Extension for XPath Derived Languages
 ## Introduction
 It comes from "_XPath N extended_" and it stands for the XPath polyfills/shim project.
 
-The idea is to have some dynamic mecanism to load some bunch of XPath extensions that are themselves written in XPath or XPath + host language
+The idea is to have some dynamic mecanism to load some bunch of XPath extensions that are themselves written in XPath completed by other extensions if needed.
 
-There might some dependencies on external dependencies like EXPath File or whatever and it needs to be clear
+There might some dependencies on external dependencies like EXPath File or whatever and it needs to be explicit.
 
-It can be loaded dynamically from some trusted source by the system
+It can be loaded dynamically from some trusted source by the system if we manage to make the mechanism sufficiently easy.
 
-
-We can create any function we like as soon we can implement it with 
-* level 0 : full XPath (depends on the XPath version then) : for example, fnext:is-odd(n) defined as n%2=1
-* level 1 : everything in level 0 and other fnext definitions : for example, fnext:is-even(n) defined as not(fnext:is-odd)
+We can create any function we like as soon we can implement it with :
+* level 0 : full XPath (depends on the XPath version then) : for example, _fnext:is-odd(n)_ defined as _$n mod 2=1_
+* level 1 : everything in level 0 and other fnext definitions : for example, _fnext:is-even(n)_ defined as _not(fnext:is-odd($n))_
 * level 2 : everything in level 1 and a set of EXPath extensions : for example is the size of file an odd number of bytes, using EXPath File
-* level 3 : everything in level 2 and some extra code dependant on the host language (XSLT, XQuery, XProc, etc.)
-* level 4 : everything in level 3 and some extra code dependant on a generic agreed language (Javascript ?)
+* level 3 : everything in level 2 and some extra code dependant on the host language (XSLT, XQuery, XProc, Schematron, etc.)
+* level 4 : everything in level 3 and some extra code dependant on a generic agreed language (Javascript, Lua, Haxe ?)
 * level 5 : everything in level 4 and some extra code dependant on the language implementation of the product (JDK, DotNet, ERlang, etc.) 
 
 ## Goals and non goals
-To provide a way to allow people to add some extension **without** having to pay the cost of writing a spec
-Of course the spec of the building blocks are around, but that's not mandatory to make every snippet of code dependant on the existence of a SPEC
+To provide a way to allow people to add some extension **without** having to pay the cost of writing a spec.
 
-Allow to extends XPath based languages with some cross knowledge from one language to the other
+Of course the spec of the building blocks are around, but that's not mandatory to make every snippet of code dependant on the existence of a SPEC.
 
-It should not replace EXPath or any other attemps to standardise way more complex extensions to XPath (things that can't be done from within XPath)
-But it should minimize the number of functions needed
-It can be seen as crowd sourced version of FunctX (add links)
+Allow to extends XPath Derived Languages with some cross knowledge from one language to the other.
+
+It should not replace EXPath or any other attemps to standardise way more complex extensions to XPath (things that can't be done from within XPath).
+
+On the other hand, it should minimize the number of functions needed in any extension since every extension that can be done with a minimal complexe function can be proposed separately.
+
+It can be seen as generalized (not only XQuery related) crowd sourced version of [FunctX](http://www.xqueryfunctions.com/xq/)
 
 ## Namespaces
 The module defined by this document defines functions and errors in the namespace [https://xmlprague.cz/ns/fnext](https://xmlprague.cz/ns/fnext). In this document, the **fnext** prefix is bound to this namespace URI.
@@ -90,7 +92,7 @@ Let's define a function that give **true** if a file is of size odd.
 </define>
 ```
 ## Tools
-We may need to have some tools to convert the define files into XSLT Function, XQuery functions or XProc functions
+We may need to have some tools to convert the define files into XSLT Function, XQuery functions or XProc functions, Schematron
 
 ## Notes
 It follows up from a discussion on slack of xml.com https://xmlcom.slack.com/archives/C01GVC3JLHE/p1669017333666309?thread_ts=1668720735.717849&cid=C01GVC3JLHE
