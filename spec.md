@@ -42,8 +42,7 @@ We will also use the following prefixes
    name = QName
    depends = NCName+
    as?= QName>
-  (param*)
-  content
+  (param*, result)
 </define>
 ```
 
@@ -51,6 +50,13 @@ We will also use the following prefixes
 <param 
     name = NCName 
     as?= QName />
+```
+
+```xml
+<result 
+    select? = text>
+   any?
+</result>
 ```
 
 
@@ -63,7 +69,7 @@ Let's define a function that give **true** is a value evaluated as a number is o
 ```xml
 <define name="fnext:is-odd" depends="xpath1" xmlns:fnext="https://xmlprague.cz/ns/fnext">
   <param name="n"/>
-  $n mod 2=1
+  <result select="$n mod 2=1"/>
 </define>
 ```
 ### Examples of Level 1
@@ -71,7 +77,7 @@ Let's define a function that give **true** is a value evaluated as a number is e
 ```xml
 <define name="fnext:is-even" depends="xpath1 fnext" xmlns:fnext="https://xmlprague.cz/ns/fnext">
   <param name="n"/>
-  not(fnext:is-odd($n))
+  <result select="not(fnext:is-odd($n))"/>
 </define>
 ```
 
@@ -80,7 +86,7 @@ Let's define a function that give **true** if a file is of size odd.
 ```xml
 <define name="fnext:is-file" depends="xpath1 fnext file" xmlns:fnext="https://xmlprague.cz/ns/fnext" xmlns:file="http://expath.org/ns/file">
   <param name="file"/>
-  fnext:is-odd(file:size($file))
+  <result select="fnext:is-odd(file:size($file))"/>
 </define>
 ```
 ## Tools
