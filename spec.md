@@ -111,6 +111,43 @@ Let's define a function that give **true** if a file is of size odd.
   <result select="fnext:is-odd(file:size($file))"/>
 </define>
 ```
+
+## Illustration
+
+![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Fedit%2Finnovimax-patch-1%2Fspec.md)
+
+
+```
+![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Fedit%2Finnovimax-patch-1%2Fspec.md)
+<details> 
+<summary></summary>
+custom_mark10
+  digraph G {
+ "XML Schema" -> XPathWithCustomizableTypesAndFunctions;
+  "JSON Schema" -> XPathWithCustomizableTypesAndFunctions;
+  "XPath" -> XPathWithCustomizableTypesAndFunctions;
+  XPathWithCustomizableTypesAndFunctions -> XSLT;
+  XPathFunctionsAndOperators -> XSLT;
+  EXPath -> XSLT;
+  XPathWithCustomizableTypesAndFunctions -> XQuery;
+  EXQuery -> XQuery;
+  EXPath -> XQuery;
+  XPathFunctionsAndOperators -> XQuery;
+  XPathFunctionsAndOperators -> XProc;
+  XPathWithCustomizableTypesAndFunctions -> XProc;
+  XPathFunctionsAndOperators -> Schematron;
+  XPathWithCustomizableTypesAndFunctions -> Schematron;
+  
+  XSLT -> XProc
+  XQuery -> XProc
+  Schematron -> XProc
+  "XML Schema" -> XProc
+  "JSON Schema" -> XProc
+  }
+custom_mark10
+</details>
+```
+
 ## Tools
 We may need to have some tools to convert the define files into XSLT Function, XQuery functions or XProc functions, Schematron
 
