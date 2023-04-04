@@ -115,6 +115,26 @@ Let's define a function that give **true** if a file is of size odd.
 
 ![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 
+![Alt text](https://g.gravizo.com/source/custom_mark11?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
+
+![Alt text](https://g.gravizo.com/source/custom_mark12?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
+
+
+
+## Tools
+We may need to have some tools to convert the define files into XSLT Function, XQuery functions or XProc functions, Schematron
+
+## Notes
+It follows up from a discussion on slack of xml.com https://xmlcom.slack.com/archives/C01GVC3JLHE/p1669017333666309?thread_ts=1668720735.717849&cid=C01GVC3JLHE
+
+It is also based on the Lockett & Retter presentation https://www.evolvedbinary.com/publications/task-abstraction-for-xpdls_february-2019.pdf
+
+Also it has been revived by discussion on issue https://github.com/qt4cg/qtspecs/issues/397
+
+## Annexe
+### Images in GraphViz
+![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
+
 ```
 ![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 <details> 
@@ -168,13 +188,58 @@ custom_mark10
 </details>
 ```
 
-## Tools
-We may need to have some tools to convert the define files into XSLT Function, XQuery functions or XProc functions, Schematron
 
-## Notes
-It follows up from a discussion on slack of xml.com https://xmlcom.slack.com/archives/C01GVC3JLHE/p1669017333666309?thread_ts=1668720735.717849&cid=C01GVC3JLHE
+![Alt text](https://g.gravizo.com/source/custom_mark11?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 
-It is also based on the Lockett & Retter presentation https://www.evolvedbinary.com/publications/task-abstraction-for-xpdls_february-2019.pdf
+```
+![Alt text](https://g.gravizo.com/source/custom_mark11?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
+<details> 
+<summary></summary>
+custom_mark11
+  digraph G {
+  subgraph schemas {
+      node [fontname="Helvetica,Arial,sans-serif"; color=blue; fillcolor=lightgrey]
+    node [shape=Msquare] "XML Schema";
+    node [shape=Msquare] "JSON Schema";
+    node [shape=Msquare] "Relax NG";
+    node [shape=Msquare] "Schematron";
+    node [shape=Msquare] "NVDL";
+    label = "Schemas";
+  }
+  
+   subgraph transformations {
+      node [fontname="Helvetica,Arial,sans-serif"; color=pink;]
+    node [shape=Mdiamond] XProc;
+    node [shape=Mdiamond] XSLT;
+    node [shape=Mdiamond] XQuery;
+    label = "Transformations";
+    fillcolor = blue;
+  }
 
-Also it has been revived by discussion on issue https://github.com/qt4cg/qtspecs/issues/397
-
+  "Relax NG" -> XPathWithCustomizableTypesAndFunctions
+  "XML Schema" -> XPathWithCustomizableTypesAndFunctions
+  "JSON Schema" -> XPathWithCustomizableTypesAndFunctions
+  "XPath" -> XPathWithCustomizableTypesAndFunctions
+  XPathWithCustomizableTypesAndFunctions -> XSLT
+  XPathFunctionsAndOperators -> XSLT
+  EXPath -> XSLT
+  XPathWithCustomizableTypesAndFunctions -> XQuery
+  EXQuery -> XQuery
+  EXPath -> XQuery
+  XPathFunctionsAndOperators -> XQuery
+  XPathFunctionsAndOperators -> XProc
+  XPathWithCustomizableTypesAndFunctions -> XProc
+  XPathFunctionsAndOperators -> Schematron
+  XPathWithCustomizableTypesAndFunctions -> Schematron
+  
+  XSLT -> XProc
+  XQuery -> XProc
+  Schematron -> XProc
+  "XML Schema" -> XProc
+  "JSON Schema" -> XProc
+  "Relax NG" -> XProc
+  NVDL -> XProc 
+    }
+custom_mark11
+</details>
+```
