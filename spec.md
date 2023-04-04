@@ -36,11 +36,21 @@ We will also use the following prefixes
 * *xpath2* to reference  last XPath 2.x Specification (https://www.w3.org/TR/xpath-20/)
 * *xpath3* to reference last XPath 3.x specification (https://www.w3.org/TR/xpath-3/)
 * *xpath4* to reference last XPath 4.x specification (TODO link)
+## Type definition (NEW)
+
+Being able to define types and being able to reuse them is a key component since it would have implication in reusing it at the 
+```xml
+<define-type 
+   name = QName
+   depends = NCName+
+   as?= QName>
+   
+</define>
 
 ## Function definition
 
 ```xml
-<define 
+<define-function 
    name = QName
    depends = NCName+
    as?= QName>
