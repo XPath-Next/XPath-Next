@@ -1,7 +1,6 @@
 # XPath Next (draft) : Extension for XPath Derived Languages
 
 ## TODO
-* ADD Relax NG and XML Schema in this picture
 * ADD the discussion around Atomization, Effective Boolean Value (EBV)
 
 ## Introduction
@@ -122,33 +121,49 @@ Let's define a function that give **true** if a file is of size odd.
 <summary></summary>
 custom_mark10
   digraph G {
-  subgraph M1 {
-  "XML Schema";
-  "JSON Schema";
-  label = "Schemas";
+  subgraph schemas {
+      node [fontname="Helvetica,Arial,sans-serif"; color=blue; fillcolor=lightgrey]
+    node [shape=Msquare] "XML Schema";
+    node [shape=Msquare] "JSON Schema";
+    node [shape=Msquare] "Relax NG";
+    node [shape=Msquare] "Schematron";
+    node [shape=Msquare] "NVDL";
+    label = "Schemas";
   }
   
-  "XML Schema" -> XPathWithCustomizableTypesAndFunctions;
-  "JSON Schema" -> XPathWithCustomizableTypesAndFunctions;
-  "XPath" -> XPathWithCustomizableTypesAndFunctions;
-  XPathWithCustomizableTypesAndFunctions -> XSLT;
-  XPathFunctionsAndOperators -> XSLT;
-  EXPath -> XSLT;
-  XPathWithCustomizableTypesAndFunctions -> XQuery;
-  EXQuery -> XQuery;
-  EXPath -> XQuery;
-  XPathFunctionsAndOperators -> XQuery;
-  XPathFunctionsAndOperators -> XProc;
-  XPathWithCustomizableTypesAndFunctions -> XProc;
-  XPathFunctionsAndOperators -> Schematron;
-  XPathWithCustomizableTypesAndFunctions -> Schematron;
+   subgraph transformations {
+      node [fontname="Helvetica,Arial,sans-serif"; color=pink;]
+    node [shape=Mdiamond] XProc;
+    node [shape=Mdiamond] XSLT;
+    node [shape=Mdiamond] XQuery;
+    label = "Transformations";
+    fillcolor = blue;
+  }
+
+  "Relax NG" -> XPathWithCustomizableTypesAndFunctions
+  "XML Schema" -> XPathWithCustomizableTypesAndFunctions
+  "JSON Schema" -> XPathWithCustomizableTypesAndFunctions
+  "XPath" -> XPathWithCustomizableTypesAndFunctions
+  XPathWithCustomizableTypesAndFunctions -> XSLT
+  XPathFunctionsAndOperators -> XSLT
+  EXPath -> XSLT
+  XPathWithCustomizableTypesAndFunctions -> XQuery
+  EXQuery -> XQuery
+  EXPath -> XQuery
+  XPathFunctionsAndOperators -> XQuery
+  XPathFunctionsAndOperators -> XProc
+  XPathWithCustomizableTypesAndFunctions -> XProc
+  XPathFunctionsAndOperators -> Schematron
+  XPathWithCustomizableTypesAndFunctions -> Schematron
   
   XSLT -> XProc
   XQuery -> XProc
   Schematron -> XProc
   "XML Schema" -> XProc
   "JSON Schema" -> XProc
-  }
+  "Relax NG" -> XProc
+  NVDL -> XProc 
+    }
 custom_mark10
 </details>
 ```
