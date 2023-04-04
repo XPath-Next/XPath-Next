@@ -134,6 +134,7 @@ Also it has been revived by discussion on issue https://github.com/qt4cg/qtspecs
 ## Annexe
 ### Images in GraphViz
 ![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
+ORIGINE
 
 ```
 ![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
@@ -160,21 +161,20 @@ custom_mark10
     fillcolor = blue;
   }
 
-  "Relax NG" -> XPathWithCustomizableTypesAndFunctions
-  "XML Schema" -> XPathWithCustomizableTypesAndFunctions
-  "JSON Schema" -> XPathWithCustomizableTypesAndFunctions
-  "XPath" -> XPathWithCustomizableTypesAndFunctions
-  XPathWithCustomizableTypesAndFunctions -> XSLT
+  "Relax NG" -> XProc
+  "XML Schema" -> XSLT
+ 
+  "XPath" ->  XSLT
   XPathFunctionsAndOperators -> XSLT
   EXPath -> XSLT
-  XPathWithCustomizableTypesAndFunctions -> XQuery
+  XPath -> XQuery
   EXQuery -> XQuery
   EXPath -> XQuery
   XPathFunctionsAndOperators -> XQuery
   XPathFunctionsAndOperators -> XProc
-  XPathWithCustomizableTypesAndFunctions -> XProc
+  XPath -> XProc
   XPathFunctionsAndOperators -> Schematron
-  XPathWithCustomizableTypesAndFunctions -> Schematron
+  XPath -> Schematron
   
   XSLT -> XProc
   XQuery -> XProc
