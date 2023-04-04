@@ -86,7 +86,8 @@ In order for this to work in all XPath bounded language, we propose an extension
 This mecanism is not needed to use those extension, because people could just continue to use the direct naming extension mecanism.
 
 ## Examples 
-### Examples of Level 0
+### Examples of Level 0 
+#### Function
 Let's define a function that give **true** is a value evaluated as a number is odd
 ```xml
 <define name="fnext:is-odd" depends="xpath1" xmlns:fnext="https://xmlprague.cz/ns/fnext">
@@ -95,6 +96,7 @@ Let's define a function that give **true** is a value evaluated as a number is o
 </define>
 ```
 ### Examples of Level 1
+#### Function
 Let's define a function that give **true** is a value evaluated as a number is even
 ```xml
 <define name="fnext:is-even" depends="xpath1 fnext" xmlns:fnext="https://xmlprague.cz/ns/fnext">
@@ -103,6 +105,7 @@ Let's define a function that give **true** is a value evaluated as a number is e
 </define>
 ```
 ### Examples of Level 2
+#### Function
 Let's define a function that give **true** if a file is of size odd.
 ```xml
 <define name="fnext:is-file" depends="xpath1 fnext file" xmlns:fnext="https://xmlprague.cz/ns/fnext" xmlns:file="http://expath.org/ns/file">
