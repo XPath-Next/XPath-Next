@@ -112,14 +112,11 @@ Let's define a function that give **true** if a file is of size odd.
 ```
 
 ## Illustration
-
+### Where we are now
 ![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 
+### Where we are heading
 ![Alt text](https://g.gravizo.com/source/custom_mark11?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
-
-![Alt text](https://g.gravizo.com/source/custom_mark12?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
-
-
 
 ## Tools
 We may need to have some tools to convert the define files into XSLT Function, XQuery functions or XProc functions, Schematron
