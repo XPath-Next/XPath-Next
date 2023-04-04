@@ -113,13 +113,13 @@ Let's define a function that give **true** if a file is of size odd.
 
 ## Illustration
 
-![Alt text](https://g.gravizo.com/source/xpathlandscape?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
+![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 
 ```
-![Alt text](https://g.gravizo.com/source/xpathlandscape?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
+![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 <details> 
 <summary></summary>
-xpathlandscape
+custom_mark10
   digraph G {
   subgraph schemas {
       node [fontname="Helvetica,Arial,sans-serif"; color=blue; fillcolor=lightgrey]
