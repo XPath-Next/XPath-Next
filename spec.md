@@ -3,7 +3,6 @@
 ## TODO
 * ADD Relax NG and XML Schema in this picture
 * ADD the discussion around Atomization, Effective Boolean Value (EBV)
-* ADD some illustration based on GraphViz
 
 ## Introduction
 It comes from "_XPath N extended_" and it stands for the XPath polyfills/shim project.
@@ -38,10 +37,11 @@ It can be seen as generalized (not only XQuery related) crowd sourced version of
 ## Namespaces
 The module defined by this document defines functions and errors in the namespace [https://xmlprague.cz/ns/fnext](https://xmlprague.cz/ns/fnext). In this document, the **fnext** prefix is bound to this namespace URI.
 We will also use the following prefixes
-* *xpath1* to reference  last XPath 1.x Specification (https://www.w3.org/TR/xpath-10/)
-* *xpath2* to reference  last XPath 2.x Specification (https://www.w3.org/TR/xpath-20/)
-* *xpath3* to reference last XPath 3.x specification (https://www.w3.org/TR/xpath-3/)
-* *xpath4* to reference last XPath 4.x specification (https://qt4cg.org/specifications/xquery-40/xpath-40.html)
+* *xpath1* to reference last XPath 1.x Specification (https://www.w3.org/TR/xpath-10/)
+* *xpath2* to reference last XPath 2.x Specification (https://www.w3.org/TR/xpath-20/)
+* *xpath3* to reference last XPath 3.x Specification (https://www.w3.org/TR/xpath-3/)
+* *xpath4* to reference last XPath 4.x Specification (https://qt4cg.org/specifications/xquery-40/xpath-40.html)
+
 ## Type definition 
 
 Being able to define types and being able to reuse them is a key component 
@@ -84,7 +84,8 @@ Being able to define a function and reuse it
 
 ## Extension mechanism
 In order for this to work in all XPath bounded language, we propose an extension attribute call **@extends-fn-with** with declare the namespace we want to extends 
-This mecanism is not needed to use those extension, because people could just continue to use the direct naming extension mecanism 
+This mecanism is not needed to use those extension, because people could just continue to use the direct naming extension mecanism.
+
 ## Examples 
 ### Examples of Level 0
 Let's define a function that give **true** is a value evaluated as a number is odd
@@ -102,7 +103,6 @@ Let's define a function that give **true** is a value evaluated as a number is e
   <result select="not(fnext:is-odd($n))"/>
 </define>
 ```
-
 ### Examples of Level 2
 Let's define a function that give **true** if a file is of size odd.
 ```xml
@@ -116,14 +116,19 @@ Let's define a function that give **true** if a file is of size odd.
 
 ![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 
-
 ```
 ![Alt text](https://g.gravizo.com/source/custom_mark10?https%3A%2F%2Fraw.githubusercontent.com%2FXPath-Next%2FXPath-Next%2Finnovimax-patch-1%2Fspec.md)
 <details> 
 <summary></summary>
 custom_mark10
   digraph G {
- "XML Schema" -> XPathWithCustomizableTypesAndFunctions;
+  subgraph M1 {
+  "XML Schema";
+  "JSON Schema";
+  label = "Schemas";
+  }
+  
+  "XML Schema" -> XPathWithCustomizableTypesAndFunctions;
   "JSON Schema" -> XPathWithCustomizableTypesAndFunctions;
   "XPath" -> XPathWithCustomizableTypesAndFunctions;
   XPathWithCustomizableTypesAndFunctions -> XSLT;
