@@ -1,4 +1,10 @@
 # XPath Next (draft) : Extension for XPath Derived Languages
+
+## TODO
+* ADD Relax NG and XML Schema in this picture
+* ADD the discussion around Atomization, Effective Boolean Value (EBV)
+* ADD some illustration based on GraphViz
+
 ## Introduction
 It comes from "_XPath N extended_" and it stands for the XPath polyfills/shim project.
 
@@ -35,19 +41,23 @@ We will also use the following prefixes
 * *xpath1* to reference  last XPath 1.x Specification (https://www.w3.org/TR/xpath-10/)
 * *xpath2* to reference  last XPath 2.x Specification (https://www.w3.org/TR/xpath-20/)
 * *xpath3* to reference last XPath 3.x specification (https://www.w3.org/TR/xpath-3/)
-* *xpath4* to reference last XPath 4.x specification (TODO link)
-## Type definition (NEW)
+* *xpath4* to reference last XPath 4.x specification (https://qt4cg.org/specifications/xquery-40/xpath-40.html)
+## Type definition 
 
-Being able to define types and being able to reuse them is a key component since it would have implication in reusing it at the 
+Being able to define types and being able to reuse them is a key component 
+
 ```xml
 <define-type 
    name = QName
    depends = NCName+
    as?= QName>
-   
-</define>
+   result
+</define-type>
+```
 
 ## Function definition
+
+Being able to define a function and reuse it
 
 ```xml
 <define-function 
@@ -55,7 +65,7 @@ Being able to define types and being able to reuse them is a key component since
    depends = NCName+
    as?= QName>
   (param*, result)
-</define>
+</define-function>
 ```
 
 ```xml
@@ -106,4 +116,8 @@ We may need to have some tools to convert the define files into XSLT Function, X
 
 ## Notes
 It follows up from a discussion on slack of xml.com https://xmlcom.slack.com/archives/C01GVC3JLHE/p1669017333666309?thread_ts=1668720735.717849&cid=C01GVC3JLHE
+
+It is also based on the Lockett & Retter presentation https://www.evolvedbinary.com/publications/task-abstraction-for-xpdls_february-2019.pdf
+
+Also it has been revived by discussion on issue https://github.com/qt4cg/qtspecs/issues/397
 
