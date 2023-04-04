@@ -215,6 +215,12 @@ custom_mark11
     label = "Transformations";
     fillcolor = blue;
   }
+  
+    subgraph xpdl {
+     node [fontname="Helvetica,Arial,sans-serif"; color=red;]
+     node [shape=mcircle] XPathWithCustomizableTypesAndFunctions;
+   }
+
 
   "Relax NG" -> XPathWithCustomizableTypesAndFunctions
   "XML Schema" -> XPathWithCustomizableTypesAndFunctions
