@@ -153,7 +153,13 @@ custom_mark10
     node [shape=Msquare] "NVDL";
     label = "Schemas";
   }
-  
+ 
+  subgraph others {
+      node [fontname="Helvetica,Arial,sans-serif"; color=blue; fillcolor=lightgrey]
+    node [shape=Doublecircle] "XForms";
+    label = "Others";
+  }
+ 
    subgraph transformations {
       node [fontname="Helvetica,Arial,sans-serif"; color=pink;]
     node [shape=Mdiamond] XProc;
@@ -166,7 +172,7 @@ custom_mark10
   "Relax NG" -> XProc
   "XML Schema" -> XSLT
  
-  "XPath" ->  XSLT
+  "XPath" =>  XSLT
   XPathFunctionsAndOperators -> XSLT
   EXPath -> XSLT
   XPath -> XQuery
