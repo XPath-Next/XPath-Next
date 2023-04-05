@@ -2,6 +2,8 @@
 
 ## TODO
 * ADD the discussion around Atomization, Effective Boolean Value (EBV)
+* ADD XForms
+* check JSONiq status
 
 ## Introduction
 It comes from "_XPath N extended_" and it stands for the XPath polyfills/shim project.
